@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="end">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Title</title>
+    </head>
+    <body>
+        <div id="root" style="background: red;">
+            root
+            <span id="id1" style="background: lightblue;">
+                id1
+            </span>
+            <div id="id2" style="background: green;">
+                id2
+                <div id="id3" style="background: yellow;">
+                    id3
+                </div>
+            </div>
+        </div>
+        <script>
+            const root = document.querySelector("#root");
+            console.log(root);
+            root.addEventListener("click", event => {
+                console.log(event.target.style.backgroundColor);
+            });
+        </script>
+    </body>
+</html>
